@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Лекция 8</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+  </style>
+</head>
+
+<body class="shower full">
+  <header class="caption">
+    <h1>Веб-разработка</h1>
+    <p>Лекция 7: JavaScript-1</p>
+  </header>
+
+  <section class="slide clear">
+    <h2 class="shout shrink">Лекция 7</h2>
+  </section>
+
+  <section class="slide clear">
+    <h2 class="shout">JavaScript</h2>
+  </section>
+
+  <!-- TODO JavaScript -->
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <p><b>JavaScript</b> — это скриптовый язык. Он придуман для того, чтобы добавлять сайтам интерактивности</p>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <p><b>JavaScript</b> —  это «безопасный» язык программирования. JavaScript на веб-странице не может:</p>
+    <ul>
+      <li>читать/записывать произвольные файлы на жёстком диске</li>
+      <li>копировать файлы на диске</li>
+      <li>запускать программы на диске</li>
+      <li>не имеет прямого доступа к системным функциям ОС</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <p>Страница с поддержкой JavaScript не может <mark>незаметно</mark>, например, включить веб-камеру/микрофон, наблюдать за происходящим и отправлять информацию. Эти способы взаимодействия требуют явного разрешения пользователя</p>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <p><b>Same Origin Policy</b> - Политика одинакового источника</p>
+    <p>JavaScript с одной страницы не имеет доступа к другой, если переход происходит с разных сайтов (с другого домена, протокола или порта).</p>
+    <p>Разные окна/вкладки не знают друг о друге</p>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <p>JavaScript – это браузерная технология, которая:</p>
+    <ol>
+      <li>имеет полную интеграцию с HTML/CSS</li>
+      <li>поддерживается всеми основными браузерами и включёна по умолчанию</li>
+      <li>JavaScript изначально создавался только для браузера, но сейчас используется на многих других платформах</li>
+      <li>многие языки могут быть «транспилированы» в JavaScript для предоставления дополнительных функций</li>
+    </ol>
+  </section>
+
+  <!-- TODO История -->
+  <section class="slide">
+    <h2>Все началось в...</h2>
+    <img src="img/ctb.jpg" width="auto" height="100%" alt="" style="
+      max-height: 380px;
+    ">
+  </section>
+
+  <section class="slide">
+    <h2>Все началось в 90-e</h2>
+    <img src="img/netscape.jpeg" width="auto" height="100%" alt="" style="
+      max-height: 380px;
+    ">
+  </section>
+
+  <section class="slide">
+    <h2>Все началось в 90-e</h2>
+    <p>Веб нуждался в лёгком скриптовом языке (языке сценариев), способном работать с DOM</p>
+    <p>Существовало одно «но»: <mark>этот язык не должен был предназначаться для крупных разработчиков и прочих людей, имевших отношение к инженерной стороне вопроса</mark></p>
+    <p>Новый скриптовый язык должен был предназначаться для дизайнеров</p>
+  </section>
+
+  <section class="slide">
+    <h2>Брендан Айк</h2>
+    <div class="columns two">
+      <img src="img/Brendan_Eich.jpg" width="auto" height="100%" alt="" style="
+      max-height: 380px;
+    ">
+    <p style="font-size: 14px">Брендан Эйх или Айк (англ. Brendan Eich, родился 4 июля 1961, Питтсбург, Пенсильвания, США) — американский программист, создатель языка программирования JavaScript. С 1995 года работал в компании Netscape; участвовал в основании Mozilla, до 2014 года был техническим директором в Mozilla Corporation. В марте 2014 года был назначен CEO, но вскоре покинул Mozilla под давлением недовольных его назначением из-за поддержки им в 2008 году запрета однополых браков. На данный момент работает исполнительным директором Brave Software <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%85,_%D0%91%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%D0%BD" target="_blank">wikipedia</a> .</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Mocha</h2>
+    <p>От Java была унаследована семантика. Таким образом, Mocha был совсем не похож на Scheme. Он выглядел, как динамический Java, под оболочкой которого скрывался гибрид Scheme и Self</p>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <ol>
+      <li>май 1995 года - прототип Mocha был интегрирован в Netscape Communicator</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <ol>
+      <li>май 1995 года - прототип Mocha был интегрирован в Netscape Communicator</li>
+      <li>Mocha переименован в <mark>LiveScript</mark></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <ol>
+      <li>май 1995 года - прототип Mocha был интегрирован в Netscape Communicator</li>
+      <li>Mocha переименован в LiveScript</li>
+      <li>LiveScript переименован в <mark>JavaScript</mark></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <p><b>JavaScript</b>  — скриптовый язык для выполнения небольших клиентских задач в браузере</p>
+    <p><b>Java</b> — полноценный профессиональный язык программирования для разработки сложных веб-компонентов</p>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript: различные реализации</h2>
+    <ul>
+      <li>JavaScript: (Sun и Netscape)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript: различные реализации</h2>
+    <ul>
+      <li><b>JavaScript</b>: Sun и Netscape (1995 г.)</li>
+      <li><b>JScript</b>: Microsoft Internet Explorer 3.0 (1996 г.)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript: различные реализации</h2>
+    <ul>
+      <li><b>JavaScript</b>: Sun и Netscape (1995 г.)</li>
+      <li><b>JScript</b>: Microsoft Internet Explorer 3.0 (1996 г.)</li>
+      <li><b>SpiderMonkey</b>: Firefox (1996 г.)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript: различные реализации</h2>
+    <ul>
+      <li><b>JavaScript</b>: Sun и Netscape (1995 г.)</li>
+      <li><b><mark>JScript</mark></b>: Microsoft Internet Explorer 3.0 (1996 г.)</li>
+      <li><b><mark>SpiderMonkey</mark></b>: Firefox (1996 г.)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Основные особенности архитектуры</h2>
+    <figure style="font-size: 16px;">
+      <blockquote>
+        <p>Решение использовать готовый язык вместо изобретения своего никаким образом не зависело от меня. Установка, поступившая с самых верхов, звучала так: “Язык должен выглядеть как Java”. Это сразу отбросило Perl, Python и Tcl вместе со Scheme. Позже, в 1996 году, к нам зашёл Джон Оустерхаут, чтобы показать Tk и посокрушаться по поводу упущенной возможности для Tcl. Я не горжусь, но я счастлив, что я выбрал в качестве основных ингредиентов функции первого класса по подобию Scheme и прототипное программирование Self. Влияние Java, особенно баги с датами в 2000 году и чувствительность к регистру, стало досадным недоразумением.</p>
+      </blockquote>
+      <figcaption>Brendan Eich's</figcaption>
+    </figure>
+   <cite></cite>
+  </section>
+
+  <section class="slide">
+    <h2>Прототипное программирование</h2>
+    <p>Прототипы сделали JavaScript обманчиво простым, дав разработчикам библиотек огромную силу</p>
+  </section>
+
+  <section class="slide">
+    <h2>Ошибки и причуды</h2>
+    <figure>
+      <blockquote>
+        <p>Всё остальное — это извращенная, безжалостная история. JavaScript стал самой популярной клиентской реализацией Java, с которой мог соперничать только Flash, поддерживавший ActionScript — прямого потомка JavaScript.</p>
+      </blockquote>
+      <figcaption>Brendan Eich's</figcaption>
+    </figure>
+  </section>
+
+  <section class="slide">
+    <h2>ECMAScript</h2>
+    <p><b>ECMA</b> — ассоциация, созданная в 1961 году с целью стандартизации информационных и коммуникационных систем</p>
+    <p>На сегодняшний день JavaScript это всего лишь коммерческое название ECMAScript</p>
+  </section>
+
+  <section class="slide">
+    <h2>ECMAScript 3</h2>
+    <p>ECMAScript 3 был выпущен в декабре 1999 года c первыми большими изменениями языка</p>
+  </section>
+
+  <section class="slide">
+    <h2>AJAX</h2>
+    <p>AJAX (asynchronous JavaScript and XML) — технология, которая позволяла браузеру выполнять асинхронные HTTP-запросы серверу, тем самым позволяя страницам обновляться на лету</p>
+    <p>AJAX позже было стандартизировано группами WHATWG и W3C</p>
+  </section>
+
+  <section class="slide">
+    <h2>ECMAScript 3.1 и 4</h2>
+    <div class="columns two">
+      <img src="img/Douglas_Crockford.jpg" width="auto" height="100%" alt="" style="
+      max-height: 380px;
+    ">
+    <figure style="font-size: 14px;">
+      <blockquote>
+        <p>Оказалось, что у представителя Microsoft были точно такие же сомнения — он тоже считал, что язык становится слишком большим и выходит из-под контроля. Он ничего не говорил до моего присоединения к группе, так как боялся, что, если Microsoft попытается выразить эту точку зрения, её обвинят в антиконкурентном поведении. Учитывая поведение Microsoft в прошлом, можно сказать, что у него были причины этого бояться, и как выяснилось, не безосновательные. Однако я убедил его, что Microsoft должна поступить правильно, и он, в свою очередь, смог убедить Microsoft изменить свою позицию относительно ES4.</p>
+      </blockquote>
+      <figcaption>Douglas Crockford — The State and Future of JavaScript</figcaption>
+    </figure>
+
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>ECMAScript 5</h2>
+    <p>В 2009 году ECMAScript 3.1 был завершен и одобрен</p>
+    <p>Из-за того, что ECMAScript 4 уже был признан особым вариантом ECMAScript, комитет решил переименовать ECMAScript 3.1 в ECMAScript 5</p>
+  </section>
+
+  <section class="slide">
+    <h2>ECMAScript 6 (2015) и 7 (2016)</h2>
+    <p>В 2009 году ECMAScript 3.1 был завершен и одобрен</p>
+    <p>Из-за того, что ECMAScript 4 уже был признан особым вариантом ECMAScript, комитет решил переименовать ECMAScript 3.1 в ECMAScript 5</p>
+  </section>
+
+  <section class="slide">
+    <h2>Asm.js</h2>
+    <p><b>Asm.js</b> — это небольшое, более строгое подмножество JavaScript которое ограничивает стандартный язык только конструкциями, типа while, if и данными в виде чисел, именованных функций, и другими простыми вещами</p>
+  </section>
+
+  <section class="slide">
+    <h2>JavaScript</h2>
+    <blockquote><p>JavaScript по-прежнему является одним из самых успешных и популярных языков</p></blockquote>
+  </section>
+
+  <!-- TODO Отличия JavaScript от Java -->
+  <section class="slide">
+    <h2>Отличия JavaScript от Java</h2>
+    <div class="columns two">
+      <div style="display: flex; flex-direction: column;">
+        <p><b>Java</b> - компилируемый, строго типизированный</p>
+        <ol>
+          <li>серверные приложения</li>
+          <li>веб-приложения</li>
+          <li>игры</li>
+          <li>Big Data</li>
+        </ol>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <p><b>JavaScript</b> - интерпретируемый, с динамической типизацией</p>
+        <ol>
+          <li>мобильные приложения</li>
+          <li>десктопные приложения</li>
+          <li>DevOps</li>
+          <li>Базы данных</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Отличия JavaScript от Java</h2>
+    <p><b>JavaScript</b> — это легкий язык для старта в программировании</p>
+    <p><mark> Java и JS входят в десятку самых популярных языков программирования</mark></p>
+  </section>
+
+  <!-- TODO Инструменты для работы с JavaScript -->
+  <section class="slide">
+    <h2>Инструменты для работы с JavaScript</h2>
+    <ol>
+      <li><mark><b>VS Code</b> — универсальная IDE (Integrated Development Environment)</mark></li>
+      <li><mark><b>Google Chrome / Mozilla Firefox</b> — браузеры</mark></li>
+      <li><b>Node.js</b> — среда исполнения JavaScript, основанная на движке V8</li>
+      <li><b>npm</b> — менеджер пакетов Node.js</li>
+      <li><b>nvm</b> — менеджер версий Node.js</li>
+      <li><b>Prettier</b> — автоматический форматер JavaScript кода</li>
+      <li><b>ESLint</b> — статический анализатор JavaScript кода</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Основные инструменты разработчика в Google Chrome</h2>
+    <p><mark>Сhrome Dev Tools</mark></p>
+    <ol>
+      <li>Elements </li>
+      <li>Console </li>
+      <li>Network </li>
+      <li>Lighthouse </li>
+      <li>Application </li>
+    </ol>
+  </section>
+
+  <!-- TODO Подключение JavaScript файлов -->
+  <section class="slide">
+    <h2>Подключение JavaScript файлов</h2>
+    <ol>
+      <li>Вставка кода внутри парного тега &lt;script&gt;</li>
+      <li>Подключение внешних файлов</li>
+      <li>JS внутри тегов HTML</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Комментарии в коде</h2>
+    <ol>
+      <li><b>однострочные, </b>начинающимися с <mark>//</mark></li>
+      <li><b>многострочные </b> располагаются между <mark>/*</mark> и <mark>*/</mark></li>
+    </ol>
+    <pre>
+      <code>// однострочный комментарий</code>
+      <code>/*</code>
+      <code>* комментарий на</code>
+      <code>* несколько строк</code>
+      <code>*/</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Вывод в консоль</h2>
+    <p>Для вывода данных в консоль обратитесь к объекту <b>console</b> и его методу <b>log</b>:</p>
+    <pre>
+      <code>// Вывод информации в консоль</code>
+      <code>console.log("Какая-либо информация");</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Переменные</h2>
+
+    <ol>
+      <li><b>var</b> — это устаревший способ объявления</li>
+      <li><b>let</b> — это современный способ объявления</li>
+      <li><b>const</b> — похоже на let, но значение переменной не может изменяться</li>
+    </ol>
+
+    <pre>
+      <code>var a = "Это строка";</code>
+      <code>let b = 42;</code>
+      <code>const c = {</code>
+      <code>  name: "Alex"</code>
+      <code>};</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Переменные</h2>
+
+    <ol>
+      <li>имя переменной должно содержать только <mark> буквы, цифры</mark> или символы <mark>$</mark> и <mark>_</mark></li>
+      <li>первый символ <b>не должен быть</b> цифрой</li>
+    </ol>
+
+    <pre>
+      <code>let user;</code>
+      <code>const user1;</code>
+    </pre>
+  </section>
+
+  <!-- TODO Типы данных -->
+  <section class="slide">
+    <h2>Типы данных</h2>
+    <div class="columns two">
+      <ul>
+        <li>null</li>
+        <li>undefined</li>
+        <li>boolean</li>
+        <li>number</li>
+      </ul>
+      <ul>
+        <li>string</li>
+        <li>symbol</li>
+        <li>BigInt</li>
+        <li>object</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TODO Арифметические операторы -->
+  <section class="slide">
+    <h2>Арифметические операторы</h2>
+    <div class="columns two">
+      <ul>
+        <li>Сложение <mark>+</mark></li>
+        <li>Вычитание <mark>-</mark></li>
+        <li>Умножение <mark>*</mark></li>
+      </ul>
+      <ul>
+        <li>Деление <mark>/</mark></li>
+        <li>Взятие остатка от деления <mark>%</mark></li>
+        <li>Возведение в степень <mark>**</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TODO Операторы присваивания и сравнения -->
+  <section class="slide">
+    <h2>Операторы присваивания и сравнения</h2>
+    <p>Основным оператором присваивания является <mark>=</mark></p>
+    <div class="columns two">
+      <ul>
+        <li>равно <mark>==</mark></li>
+        <li>не равно <mark>!=</mark></li>
+        <li>строго равно <mark>===</mark></li>
+        <li>строго не равно <mark>!==</mark></li>
+      </ul>
+      <ul>
+        <li>больше <mark>&gt;</mark></li>
+        <li>больше или равно <mark>&gt;=</mark></li>
+        <li>меньше <mark>&lt;</mark></li>
+        <li>меньше или равно <mark>&lt;=</mark></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TODO Логические операторы -->
+  <section class="slide">
+    <h2>Логические операторы</h2>
+    <ul>
+      <li>Логическое И <mark>&&</mark></li>
+      <li>Логическое ИЛИ <mark>||</mark></li>
+      <li>Логическое НЕ <mark>!</mark></li>
+    </ul>
+  </section>
+
+  <!-- TODO Условное ветвление -->
+  <section class="slide">
+    <h2>Условное ветвление</h2>
+    <p>Иногда нам нужно выполнить различные действия в зависимости от условий</p>
+    <pre>
+      <code>if (year == '2024') {</code>
+      <code>  console.log("Это текущий год");</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Преобразование к логическому типу</h2>
+    <ol>
+      <li>Число <b>0</b>, пустая строка <b>""</b>, <b>null</b>, <b>undefined</b> и <b>NaN</b> становятся <mark>false</mark>. Из-за этого их называют «ложными» («falsy») значениями</li>
+      <li>Остальные значения становятся <mark>true</mark>, поэтому их называют «правдивыми» («truthy»)</li>
+    </ol>
+    <pre>
+      <code>if ("Строка") { // "Строка" преобразовывается в <mark>true</mark></code>
+      <code>  console.log("Это правдивое значение");</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Блок «else»</h2>
+    <pre>
+      <code>if (year === '2024') {</mark></code>
+      <code>  console.log("Это верно");</code>
+      <code>} <mark>else</mark> {</code>
+      <code>  console.log("Это не верно");</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Блок «else if»</h2>
+    <pre>
+      <code>if (age < 18) {</mark></code>
+      <code>  console.log('Потребовать паспорт');</code>
+      <code>} <mark>else if</mark> (age >= 18 && age < 30) {</mark></code>
+      <code>  console.log('Потребовать паспорт (на всякий случай)');</code>
+      <code>} else {</code>
+      <code>  console.log('Предложить скидку');</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Условный (тернарный) оператор</h2>
+    <p><mark>condition ? val1 : val2</mark></p>
+    <pre>
+      <code> age >= 18 ? alert('Потребовать паспорт') : alert('Предложить скидку');</mark></code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>switch</h2>
+    <pre style="font-size: 16px;">
+      <code>switch(x) {</code>
+      <code>  case 'value1':  // if (x === 'value1')</code>
+      <code>    ...</code>
+      <code>    [break]</code>
+      <code>  case 'value2':  // if (x === 'value2')</code>
+      <code>    ...</code>
+      <code>    [break]</code>
+      <code>  default</code>
+      <code>    ...</code>
+      <code>    [break]</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <!-- TODO Циклы -->
+  <section class="slide">
+    <h2>Циклы</h2>
+    <ol>
+      <li>for</li>
+      <li>while</li>
+      <li>do while</li>
+      <li>forEach</li>
+      <li>...</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Цикл for</h2>
+    <pre>
+      <code>for (начало; условие; шаг) {</code>
+      <code>  // ... тело цикла ...</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Цикл while/do..while</h2>
+    <div class="columns two">
+      <pre>
+        <code>while (condition) {</code>
+        <code>  // ... тело цикла ...</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>do {</code>
+        <code>  // ... тело цикла ...</code>
+        <code>} while (condition);</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Цикл forEach</h2>
+    <pre>
+      <code>array.forEach((item, index, arr) => {</code>
+      <code>  // ... тело цикла ...</code>
+      <code>})</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Прерывание цикла</h2>
+    <p>Обычно цикл завершается при вычислении условия в <b>false</b>. Но мы можем выйти из цикла в любой момент с помощью специальной директивы <mark>break</mark>
+      </p>
+    <pre style="font-size: 16px;">
+      <code>for (let i = 0; i < 10; i++) {</code>
+      <code>  if (i == 5) {</code>
+      <code>    <mark>break;</mark></code>
+      <code>  }</code>
+      <code>  // что-то делаем</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Переход к следующей итерации</h2>
+    <p>При выполнении директивы <mark>continue</mark> цикл не прерывается, а переходит к следующей итерации</p>
+    <pre style="font-size: 16px;">
+      <code>for (let i = 0; i < 10; i++) {</code>
+      <code>  if (i % 2 == 0) <mark>continue</mark>;</code>
+      <code>  // что-то делаем</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <!-- TODO Массивы -->
+  <section class="slide">
+    <h2>Массивы</h2>
+    <p><b>Массив</b> (объект Array) — структура данных, которая позволяет хранить коллекцию из нескольких элементов</p>
+    <pre>
+      <code>const cats = ['Murzik', 'Barsik'];</code>
+      <code>const nums = [42, 1, -5, 0];</code>
+      <code>const some = [81, 'message', true, { a: 1, b: 2}, [0, 1]];</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Создание массивов </h2>
+    <pre>
+      <code>let arr1 = new Array();</code>
+      <code>let arr2 = ['white', 'blue', 'red'];</code>
+    </pre>
+    <p>Чтобы получить элемент, указав его номер в квадратных скобках</p>
+    <pre>
+      <code>console.log(arr2[0])</code>
+      <code>console.log(arr2[1])</code>
+      <code>console.log(arr2[2])</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Методы массивов</h2>
+    <p><mark>arr.[название метода]()</mark></p>
+    <ol>
+      <li><b>pop</b> — удаляет последний элемент из массива</li>
+      <li><b>push</b> — добавляет элемент в конец массива</li>
+      <li><b>shift</b> — удаляет из массива первый элемент</li>
+      <li><b>unshift</b> — добавляет элемент в начало массива</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Перебор элементов массива</h2>
+    <p>Для массивов возможен также перебор с помощью цикла <mark>for..of</mark></p>
+    <pre>
+      <code><mark>for</mark> (let color <mark>of</mark> colors) {</code>
+      <code>  console.log( color );</code>
+      <code>}</code>
+    </pre>
+    <p>Цикл for..of не предоставляет доступа к номеру текущего элемента, только к его значению</p>
+  </section>
+
+  <!-- TODO Объекты -->
+  <section class="slide">
+    <h2>Объекты</h2>
+    <p><b>Объекты</b> – это ассоциативные массивы с рядом дополнительных возможностей. Они хранят свойства (пары ключ-значение), где:</p>
+    <ul>
+      <li><b>ключи</b> свойств должны быть строками или символами</li>
+      <li><b>значения</b> могут быть любого типа</li>
+    </ul>
+    <pre style="font-size: 16px;">
+      <code>const messages = {</code>
+      <code>  'msg': 'Ошибка доступа' <mark class="important">,</mark></code>
+      <code>  'code': 0</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Объекты</h2>
+    <p>Чтобы получить доступ к свойству, мы можем использовать:</p>
+
+    <ol>
+      <li><b>obj.property</b> — через точку</li>
+      <li><b>obj["property"]</b> — с помощью квадратных скобок</li>
+    </ol>
+    <pre>
+      <code>console.log(messages.code) // "0"</code>
+      <code>console.log(messages['msg']) // "Ошибка доступа"</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Перебор свойств объекта</h2>
+    <p>Для объектов возможен перебор с помощью цикла <mark>for..in</mark></p>
+    <pre>
+      <code><mark>for</mark> (let item <mark>in</mark> colors) {</code>
+      <code>  console.log( colors[item] );</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Создание объектов</h2>
+    <p>Обычно используют вариант с фигурными скобками {...}. Такое объявление называют литералом объекта или литеральной нотацией</p>
+    <pre>
+      <code>const a = {}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Строковые объекты</h2>
+    <p>Содержимое строки в JavaScript нельзя изменить. Можно создать новую строку и записать её в ту же самую переменную вместо старой</p>
+  </section>
+
+  <section class="slide">
+    <h2>Кавычки</h2>
+    <ol>
+      <li><b><mark>'</mark></b> — одинарные</li>
+      <li><b><mark>"</mark></b> — двойные</li>
+      <li><b><mark>`</mark></b> — обратные</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Длина строки</h2>
+    <p>Свойство <b>length</b> содержит длину строки</p>
+    <pre>
+      <code>let a = 'text'</code>
+      <code>console.log(a.lenght) // 4</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Методы для работы со строками</h2>
+    <p>Методы <b>toLowerCase()</b> и <b>toUpperCase()</b> меняют регистр символов:</p>
+    <pre>
+      <code>console.log( 'Text'.toUpperCase() ); // TEXT</code>
+      <code>console.log( 'Text'.toLowerCase() ); // text</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Методы для работы со строками</h2>
+    <p>Для поиска подстроки используйте <b>indexOf</b> или <b>includes/startsWith/endsWith</b>, когда надо только проверить, есть ли вхождение</p>
+    <pre>
+      <code>let str = 'Some text';</code>
+      <code>console.log(str.indexOf('Some')); // 0 </code>
+      <code>console.log(str.includes('Some')); // true </code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Получение подстроки</h2>
+    <p>substring, substr и slice</p>
+
+    <ol>
+      <li><b>slice(start, end)</b>: ищет от start до end (не включая end)</li>
+      <li><b>substring(start, end)</b>: ищет между start и end (не включая end)</li>
+      <li><b>substr(start, length)</b>: ищет length символов, начиная от start</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Сравнение строк</h2>
+    <p>Строки сравниваются посимвольно в алфавитном порядке, но:</p>
+    <ol>
+      <li>строчные буквы больше заглавных</li>
+      <li>буквы, имеющие диакритические знаки, могут идти &laquo;не&nbsp;по&nbsp;порядку&raquo;</li>
+    </ol>
+
+    <pre>
+      <code>console.log('z' > 'a') // false</code>
+      <code>console.log('a' > 'Z') // true</code>
+      <code>console.log('Österreich' > 'Zealand') // true</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Правильное сравнение строк</h2>
+    <p>все современные браузеры поддерживают стандарт ECMA 402, обеспечивающий правильное сравнение строк на разных языках с учётом их правил</p>
+
+    <pre>
+      <code><mark>str.localeCompare(str2)</mark> // вернет число</code>
+    </pre>
+    <ul>
+      <li>0, если строки равны</li>
+      <li>положительное число, если str больше str2</li>
+      <li>отрицательное число, если str меньше str2</li>
+    </ul>
+  </section>
+
+  <!-- TODO Математические функции -->
+  <section class="slide">
+    <h2>Объект Math</h2>
+
+    <div class="columns two">
+     <div style="display: flex; flex-direction: column;">
+      <span style="text-decoration: underline;">Свойства:</span>
+      <ul>
+        <li>Math.PI</li>
+        <li>Math.SQRT1_2</li>
+        <li>Math.SQRT2</li>
+        <li>...</li>
+      </ul>
+     </div>
+     <div style="display: flex; flex-direction: column;">
+      <span style="text-decoration: underline;">Методы:</span>
+      <ul>
+        <li>Math.abs(x)</li>
+        <li>Math.max([x[, y[, …]]])</li>
+        <li>Math.random()</li>
+        <li>...</li>
+      </ul>
+     </div>
+    </div>
+  </section>
+
+  <!-- TODO Дата и время -->
+  <section class="slide">
+    <h2>Дата и время</h2>
+    <pre>
+      <code>let date = new Date();</code>
+    </pre>
+    <div style="display: flex; flex-direction: column;">
+      <span style="text-decoration: underline;">Методы:</span>
+      <ul style="font-size: 20px;">
+        <li><b>getFullYear()</b>: получить год (4 цифры)</li>
+        <li><b>getMonth()</b>: получить месяц, от 0 до 11</li>
+        <li><b>getDate()</b>: получить день месяца, от 1 до 31</li>
+        <li><b>getHours(), getMinutes(), getSeconds(), getMilliseconds()</b>: получить, соответственно, часы, минуты, секунды или миллисекунды</li>
+        <li><b> Date.now()</b>: возвращает текущую метку времени</li>
+      </ul>
+     </div>
+  </section>
+
+  <!-- TODO Функции -->
+  <section class="slide">
+    <h2>Функции</h2>
+    <p>Функция — специальный тип объектов, позволяющий описать средствами языка определённую повторяющуюся логику поведения</p>
+    <pre>
+      <code><b>function</b> <span style="color: rgb(24, 148, 219);">sayHello</span>() {</code>
+      <code>  console.log('Привет!');</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Функции</h2>
+    <p>В функцию можно передавать параметры</p>
+    <pre>
+      <code>function sayHello(<b>name</b>) {</code>
+      <code>  console.log('Привет!' + <b>name</b>);</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Функции</h2>
+    <p>Функция может возвращать значение</p>
+    <pre>
+      <code>function calcSum(a, b) {</code>
+        <code>  <b>return</b> a + b;</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Функции</h2>
+    <p>Функции являются основными строительными блоками скриптов</p>
+  </section>
+
+  <section class="slide">
+    <h2>Функциональное выражение (Function Expression)</h2>
+    <div class="columns two">
+      <div>
+        <span>Function Declaration</span>
+        <pre>
+          <code><b>function</b> <span style="color: rgb(24, 148, 219);">sayHello</span>() {</code>
+          <code>  console.log('Привет!');</code>
+          <code>}</code>
+        </pre>
+      </div>
+      <div>
+        <span>Function Expression</span>
+        <pre>
+          <code>let <span style="color: rgb(24, 148, 219);">hello</span> = <b>function</b>() {</code>
+          <code>  console.log('Привет!');</code>
+          <code>}</code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Стрелочные функции</h2>
+    <div class="columns two">
+     <div>
+      <span>Function Declaration</span>
+      <pre>
+        <code><b>function</b> <span style="color: rgb(24, 148, 219);">calcSum</span>(a, b) {</code>
+        <code>  return a + b;</code>
+        <code>}</code>
+      </pre>
+     </div>
+      <div>
+        <span>Arrow Functions</span>
+        <pre>
+          <code>let <span style="color: rgb(24, 148, 219);">calcSum</span> = () <b>=></b> a + b;</code>
+        </pre>
+        <span> или так:</span>
+        <pre>
+          <code>let <span style="color: rgb(24, 148, 219);">calcSum</span> = () <b>=></b> {</code>
+          <code>  return a + b;</code>
+          <code>}</code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODO Контекст вызова функции -->
+  <section class="slide">
+    <h2>Контекст вызова функции</h2>
+    <p>Контекст выполнения ( <b>execution context</b> ) — это окружение, в котором производится выполнение кода на JavaScript</p>
+    <ul>
+      <li>Глобальный контекст выполнения</li>
+      <li>Контекст выполнения функции</li>
+      <li>Контекст выполнения функции eval</li>
+    </ul>
+  </section>
+
+  <!-- TODO Замыкание -->
+  <section class="slide">
+    <h2>Замыкание</h2>
+    <p>Функция «запоминает» окружение, в котором она была создана</p>
+  </section>
+
+  <!-- TODO DOM -->
+  <section class="slide">
+    <h2>DOM</h2>
+    <p>DOM (Document Object Model) — это структура, которая создается браузером при загрузке страницы на основе HTML-кода страницы</p>
+    <div class="columns two">
+      <div class="flex col">
+        <span>Свойства</span>
+        <pre>
+          <code><mark>document</mark>.title</code>
+          <code><mark>document</mark>.forms</code>
+          <code><mark>document</mark>.body</code>
+          <code><mark>document</mark>.head</code>
+        </pre>
+      </div>
+      <div class="flex col">
+        <span>Методы</span>
+        <pre>
+          <code><mark>document</mark>.getElementById</code>
+          <code><mark>document</mark>.getElementsByClassName</code>
+          <code><mark>document</mark>.getElementsByTagName</code>
+          <code><mark>document</mark>.querySelector</code>
+          <code><mark>document</mark>.querySelectorAll</code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>DOM</h2>
+    <img src="img/dom.png" width="auto" height="100%" alt="" style="
+      max-height: 380px;
+      display: flex;
+    ">
+  </section>
+
+  <section class="slide">
+    <h2>Доступ к элементам DOM</h2>
+    <ol>
+      <li><b>getElementById</b>: поиск элемента по идентификатору</li>
+      <li><b>getElementsByClassName</b>: поиск элементов по названию класса</li>
+      <li><b>getElementsByTagName</b>: поиск элементов по названию тега</li>
+      <li><b>querySelector</b>: поиск первого элемента, подходящего под CSS-селектор</li>
+      <li><b>querySelectorAll</b>: поиск всех элементов подходящих под CSS-селектор</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Доступ к элементам DOM</h2>
+    <pre>
+      <code>document.querySelector('#block');</code>
+      <code>document.querySelector('.block');</code>
+      <code>document.querySelector('div');</code>
+      <code>document.querySelector('[type="text"]');</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Создание новых HTML элементов (узлов)</h2>
+    <pre>
+      <code>let elem = document.createElement('p');</code>
+      <code>let node = document.createTextNode('Это новый параграф');</code>
+      <code>elem.appendChild(node);</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Удаление существующих HTML элементов</h2>
+    <p>
+      <mark>
+        <span>Текст 1</span>
+        <span>Текст 2</span>
+        <span>Текст 3</span>
+        <span>Текст 4</span>
+      </mark>
+    </p>
+    <pre style="font-size: 16px;">
+      <code>&lt;p&gt;</code>
+      <code>  &lt;span&gt;Текст 1&lt;/span&gt;</code>
+      <code>  &lt;span&gt;Текст 2&lt;/span&gt;</code>
+      <code>  &lt;span&gt;Текст 3&lt;/span&gt;</code>
+      <code>  &lt;span&gt;Текст 4&lt;/span&gt;</code>
+      <code>&lt;/p&gt;</code>
+    </pre>
+    <pre style="font-size: 16px;">
+      <code>let parent = document.querySelector('p');</code>
+      <code>let child = <mark>parent</mark>.querySelector('span');</code>
+      <code>parent.removeChild(child);</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Замена HTML элемента</h2>
+    <pre>
+      <code>let elem = document.createElement('p');</code>
+      <code>let node = document.createTextNode('Новый параграф');</code>
+      <code>elem.appendChild(node);</code>
+      <code> </code>
+      <code>let parent = document.querySelector('.block');</code>
+      <code>let child = parent.querySelector('.inner-block');</code>
+      <code>parent.replaceChild(elem, child);</code>
+    </pre>
+  </section>
+
+   <!-- TODO Cобытия -->
+  <section class="slide">
+    <h2>Cобытия</h2>
+    <p>Событие – это сигнал от браузера о том, что что-то произошло</p>
+  </section>
+
+  <section class="slide">
+    <h2>Cобытия</h2>
+    <div class="flex col">
+      <span><mark>События мыши</mark>:</span>
+      <ul>
+        <li>click</li>
+        <li>contextmenu</li>
+        <li>mouseover / mouseout</li>
+        <li>mousedown / mouseup</li>
+        <li>mousemove</li>
+        <li>...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Cобытия</h2>
+    <div class="flex col">
+      <span><mark>События на элементах управления</mark>:</span>
+      <ul>
+        <li>submit</li>
+        <li>focus</li>
+        <li>blur</li>
+        <li>...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Cобытия</h2>
+    <div class="flex col">
+      <span><mark>Клавиатурные события</mark>:</span>
+      <ul>
+        <li>keydown</li>
+        <li>keyup</li>
+        <li>keypress</li>
+        <li>...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Cобытия</h2>
+    <div class="flex col">
+      <span><mark>События документа</mark>:</span>
+      <ul>
+        <li>DOMContentLoaded</li>
+        <li>...</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Cобытия</h2>
+    <div class="flex col">
+      <span><mark>CSS events</mark>:</span>
+      <ul>
+        <li>transitionend</li>
+        <li>...</li>
+      </ul>
+    </div>
+  </section>
+
+   <!-- TODO Обработчики событий -->
+  <section class="slide">
+    <h2>Обработчики событий</h2>
+    <p><b>Обработчик события</b> — функция, которая сработает, как только событие произойдет</p>
+    <pre>
+      <code>element.addEventListener(event, handler, [options]);</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Объект события</h2>
+    <p>Когда происходит событие, браузер создаёт <b>объект события</b>, записывает в него детали и передаёт его в качестве аргумента функции-обработчику</p>
+    <pre>
+      <code>document.addEventListener('click', ( <mark class="ignore">event</mark> ) => {</code>
+      <code>  console.log('Объект события (event) -->', <mark class="ignore">event</mark> );</code>
+      <code>})</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Всплытие и перехват событий</h2>
+    <img src="img/events.svg" width="100%" height="100%" alt="" style="
+      max-height: 370px;
+      margin: 0 auto;
+      display: flex;
+      object-fit: contain;
+    ">
+     <cite class="small" >Источник <a href="https://learn.javascript.ru/bubbling-and-capturing" target="_blank">JavaScript.ru</a></cite>
+  </section>
+
+  <section class="slide">
+    <h2>Всплытие</h2>
+    <pre>
+      <code>&lt;div onclick=&quot;alert('div outer')&quot;&gt;</code>
+      <code>  &lt;div onclick=&quot;alert('div inner')&quot;&gt;</code>
+      <code>    &lt;p onclick=&quot;alert('paragraph')&quot;&gt;Текст&lt;/p&gt;</code>
+      <code>  &lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+    </pre>
+    <div onclick="alert('div outer')">
+      <div onclick="alert('div inner')">
+        <p onclick="alert('paragraph')"
+          style="
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: rgba(204, 204, 204, 0.3);
+            "
+          >Текст</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Всплытие</h2>
+    <p><b>event.target</b> — целевой элемент, который вызывает событие</p>
+  </section>
+
+  <section class="slide">
+    <h2>Всплытие</h2>
+    <p><b>event.target</b> — целевой элемент, который вызывает событие</p>
+    <p><b>event.stopPropagation()</b> — останавливает всплытие события</p>
+  </section>
+
+  <section class="slide">
+    <h2>Всплытие</h2>
+    <p><b>event.target</b> — целевой элемент, который вызывает событие</p>
+    <p><b>event.stopPropagation()</b> — останавливает всплытие события</p>
+    <p><b>event.stopImmediatePropagation()</b> — останавливает всплытие события и останавливает обработку событий на текущем элементе</p>
+  </section>
+
+  <section class="slide">
+    <h2>Погружение</h2>
+    <pre>
+      <code>elem.addEventListener(..., {capture: true})</code>
+      <code>// или просто "true"</code>
+      <code>elem.addEventListener(..., true)</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Погружение</h2>
+
+    <div class="columns two" s>
+      <pre style="font-size: 16px;">
+        <code>html -> body -> ...</code>
+        <code> ... </code>
+        <code>&lt;div&gt; <span style="color: #831b1b;">outer div</span></code>
+        <code>  &lt;div&gt; <span style="color: #1b3c83;">inner div</span></code>
+        <code>    &lt;p&gt;<span style="color: #60ad17;">paragraph</span>&lt;/p&gt;</code>
+        <code>  &lt;/div&gt;</code>
+        <code>&lt;/div&gt;</code>
+      </pre>
+      <div style="padding: 7px;border: 1px solid #12b9a3; color: #831b1b;"> outer div
+        <div style="padding: 7px;border: 1px solid #12b9a3; color: #1b3c83;"> inner div
+          <p style="padding: 7px;border: 1px solid #12b9a3;  color: #60ad17;">paragraph</p>
+        </div>
+      </div>
+    </div>
+    <pre style="margin-top: 24px; font-size: 16px;">
+      <code>for (let elem of document.querySelectorAll('*')) {</code>
+      <code> elem.addEventListener('click', e => alert(`Погружение: ${elem.tagName}`), <mark class="ignore"> true </mark>);</code>
+      <code> elem.addEventListener('click', e => alert(`Всплытие: ${elem.tagName}`));</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <!-- TODO Example -->
+  <section class="slide">
+    <h2>Делегирование событий</h2>
+    <table class="table-example">
+      <thead>
+        <tr>
+          <td>Заголовок 1</td>
+          <td>Заголовок 2</td>
+          <td>Заголовок 3</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ячейка 1</td>
+          <td>Ячейка 2</td>
+          <td>Ячейка 3</td>
+        </tr>
+        <tr>
+          <td>Ячейка 4</td>
+          <td>Ячейка 5</td>
+          <td>Ячейка 6</td>
+        </tr>
+        <tr>
+          <td>Ячейка 7</td>
+          <td>Ячейка 8</td>
+          <td>Ячейка 9</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      let table = document.querySelector('.table-example');
+
+      table.addEventListener('click', (evt) => {
+        if (evt.target.tagName === 'TD' ) {
+          evt.target.style.backgroundColor = 'rgb(54 161 197)';
+        }
+      });
+    </script>
+  </section>
+
+  <section class="slide">
+    <h2>Делегирование событий</h2>
+    <pre>
+      <code>let table = document.querySelector('.table-example');</code>
+      <code>  </code>
+      <code><mark>table</mark>.addEventListener('click', (evt) => {</code>
+      <code>  if (evt.target.tagName === 'TD' ) {</code>
+      <code>    evt.target.style.backgroundColor = 'rgb(54 161 197)';</code>
+      <code>  }</code>
+      <code>});</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Делегирование событий</h2>
+    <ol>
+      <li>меньше кода</li>
+      <li>экономит память</li>
+      <li>удобство изменений DOM</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>event submit: отправка формы</h2>
+    <div>
+      <form class="submit-example">
+        <label>
+          Ваш текст:
+        </label>
+        <input type="text">
+        <div class="wrap">
+          <button type="submit">Отправить</button>
+          <button type="reset">Очистить</button>
+        </div>
+        <p>Вы отправили: <span></span></p>
+      </form>
+    </div>
+
+
+    <script>
+      let form = document.querySelector('.submit-example');
+      let input = form.querySelector('input');
+      let output = form.querySelector('span');
+
+      form.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+        if (input.value.length) {
+          output.textContent = input.value;
+        } else {
+          output.textContent = 'ничего';
+        }
+      })
+    </script>
+  </section>
+
+  <section class="slide">
+    <h2>event submit: отправка формы</h2>
+    <pre style="font-size: 16px;">
+      <code>let form = document.querySelector('.submit-example');</code>
+      <code>let input = form.querySelector('input');</code>
+      <code>let output = form.querySelector('span');</code>
+      <code>  </code>
+      <code>form.addEventListener(<mark>'submit'</mark>, (evt) => {</code>
+      <code>  <mark class="ignore">evt.preventDefault();</mark></code>
+      <code>  if (input.value.length) {</code>
+      <code>    output.textContent = input.value;</code>
+      <code>  } else {</code>
+      <code>    output.textContent = 'ничего';</code>
+      <code>  }</code>
+      <code>})</code>
+    </pre>
+  </section>
+
+   <!-- TODO Синхронный код -->
+  <section class="slide">
+    <h2>Синхронный код</h2>
+    <pre>
+      <code><mark>let form = document.querySelector('.submit-example');</mark></code>
+      <code>let input = form.querySelector('input');</code>
+      <code>let output = form.querySelector('span');</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Синхронный код</h2>
+    <pre>
+      <code>let form = document.querySelector('.submit-example');</code>
+      <code><mark>let input = form.querySelector('input');</mark></code>
+      <code>let output = form.querySelector('span');</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Синхронный код</h2>
+    <pre>
+      <code>let form = document.querySelector('.submit-example');</code>
+      <code>let input = form.querySelector('input');</code>
+      <code><mark>let output = form.querySelector('span');</mark></code>
+    </pre>
+  </section>
+
+  <!-- TODO Асинхронный код -->
+  <section class="slide">
+    <h2>Асинхронный код</h2>
+    <div class="asinc-example">
+      <p class="asinc-example__timer">Timer: <span>0</span></p>
+      <div class="asinc-example__wrap">
+        <button class="asinc-example__button">Нажми на меня</button>
+        <p class="asinc-example__out"></p>
+      </div>
+    </div>
+
+    <script>
+      let button = document.querySelector('.asinc-example__button');
+      let out = document.querySelector('.asinc-example__out');
+      let timer = document.querySelector('.asinc-example__timer span');
+
+      button.addEventListener('click', () => {
+        let count = 1;
+
+        let examInterval = setInterval(() => {
+          timer.textContent = `${count}`;
+          count += 1;
+        }, 1000);
+
+        setTimeout(() => {
+          out.textContent = 'Cпустя 3 секунды';
+          clearInterval(examInterval);
+        }, 3000);
+
+        out.textContent = 'Этот текст показался СРАЗУ';
+        out.classList.add('show');
+      });
+    </script>
+  </section>
+
+  <section class="slide">
+    <h2>Асинхронный код</h2>
+
+    <pre style="font-size: 16px;">
+      <code>let button = document.querySelector('.asinc-example__button');</code>
+      <code>let out = document.querySelector('.asinc-example__out');</code>
+      <code>  </code>
+      <code>button.addEventListener('click', () => {</code>
+      <code>  setTimeout(() => {</code>
+      <code>    out.textContent = <mark>'Cпустя 3 секунды'</mark>;</code>
+      <code>  }, 3000)</code>
+      <code>  </code>
+      <code>  out.textContent = <mark>'Этот текст показался СРАЗУ'</mark>;</code>
+      <code>  out.classList.add('show');</code>
+      <code>});</code>
+    </pre>
+  </section>
+
+  <!-- TODO Колбеки -->
+  <section class="slide">
+    <h2>Колбеки</h2>
+    <p><b>Callback</b> (колбэк, функция обратного вызова) — функция, которая вызывается в ответ на совершение некоторого события</p>
+    <pre>
+      <code>function printText () {</code>
+      <code>  out.textContent = 'Cпустя 3 секунды';</code>
+      <code>}</code>
+      <code>  </code>
+      <code>  setTimeout(<mark>pritnText</mark>, 3000)</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Ад колбэков (Callback-hell)</h2>
+    <p><b>Callback</b> (колбэк, функция обратного вызова) — функция, котрая вызывается в ответ на совершение некоторого события</p>
+    <div class="columns two">
+      <div class="asinc-example">
+        <div class="asinc-example__wrap">
+          <button class="asinc-example__button cb">Нажми на меня</button>
+        </div>
+      </div>
+      <pre style="font-size: 14px;">
+        <code>setTimeout(() => {</code>
+        <code>  setTimeout(() => {</code>
+        <code>    setTimeout(() => {</code>
+        <code>       setTimeout(() => {</code>
+        <code>          alert('Отработал setTimeout')</code>
+        <code>        }, 1000)</code>
+        <code>      }, 1000)</code>
+        <code>  }, 1000)</code>
+        <code>}, 1000);</code>
+      </pre>
+    </div>
+
+    <script>
+      let buttonCb = document.querySelector('.cb');
+
+      buttonCb.addEventListener('click', () => {
+        setTimeout(() => {
+          setTimeout(() => {
+            setTimeout(() => {
+              setTimeout(() => {
+                alert('Отработал setTimeout')
+              }, 1000)
+            }, 1000)
+          }, 1000)
+        }, 1000);
+      });
+    </script>
+  </section>
+
+  <!-- TODO Промисы -->
+  <section class="slide">
+    <h2>Промисы</h2>
+    <p><b>Промис</b> — это объект-обёртка для асинхронного кода. Он содержит в себе состояние: вначале <b>pending («ожидание»)</b>, затем — одно из: <b>fulfilled («выполнено успешно»)</b> или <b>rejected («выполнено с ошибкой»)</b></p>
+  </section>
+
+  <section class="slide">
+    <h2>Промисы</h2>
+    <pre>
+      <code>function promiseFunc() {</code>
+      <code>  return new Promise(function (resolve, reject) {</code>
+      <code>    <mark>resolve</mark>( /*...*/)</code>
+      <code> })</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Промисы</h2>
+    <pre>
+      <code>promiseFunc()</code>
+      <code>  .then(a => /*...*/)</code>
+      <code>  .then(b => /*...*/)</code>
+      <code>  .then(c => /*...*/)</code>
+    </pre>
+  </section>
+
+  <!-- TODO API -->
+  <section class="slide">
+    <h2>API</h2>
+    <p><b>API</b> (Application Programming Interface — программный интерфейс приложения) — это набор способов и правил, по которым различные программы общаются между собой и обмениваются данными</p>
+  </section>
+
+  <section class="slide">
+    <h2>API</h2>
+    <p><mark>{JSON} Placeholder</mark></p>
+    <div class="asinc-example">
+      <textarea class="out-api"></textarea>
+      <div class="asinc-example__wrap">
+        <button class="asinc-example__button btn-api">Нажми на меня</button>
+      </div>
+    </div>
+    <script>
+      let buttonApi = document.querySelector('.btn-api');
+      let outApi = document.querySelector('.out-api');
+
+      buttonApi.addEventListener('click', () => {
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then((response) => response.json())
+        .then((json) => {
+          outApi.textContent = JSON.stringify(json);
+          console.log(json)
+        });
+      });
+    </script>
+  </section>
+
+  <section class="slide">
+    <h2>API</h2>
+    <p><mark>{JSON} Placeholder</mark></p>
+    <pre style="font-size: 14px;">
+      <code>let buttonApi = document.querySelector('.btn-api');</code>
+      <code>let outApi = document.querySelector('.out-api');</code>
+      <code>  </code>
+      <code>buttonApi.addEventListener('click', () => {</code>
+      <code>  <mark>fetch</mark>( <mark class="ignore">'https://jsonplaceholder.typicode.com/posts/1'</mark> )</code>
+      <code>    .then((response) => response.json())</code>
+      <code>    .then((json) => {</code>
+      <code>      outApi.textContent = JSON.stringify(json);</code>
+      <code>      console.log(json)</code>
+      <code>    });</code>
+      <code>});</code>
+    </pre>
+  </section>
+
+  <!-- Методы HTTP запроса -->
+  <section class="slide">
+    <h2>Методы HTTP запроса</h2>
+    <ol>
+      <li><mark>GET</mark></li>
+      <li><mark>POST</mark></li>
+      <li>PUT</li>
+      <li>DELETE</li>
+      <li>PATCH</li>
+    </ol>
+  </section>
+
+  <!-- TODO CRUD-операции -->
+  <section class="slide">
+    <h2>CRUD-операции</h2>
+    <ol>
+      <li>Создание</li>
+      <li>Чтение</li>
+      <li>Обновление</li>
+      <li>Удаление</li>
+    </ol>
+    <p>CRUD строят вокруг пользователя или какой-то другой сущности. Для этого создают либо интерфейс с формами, либо HTTP API эндпоинты</p>
+  </section>
+
+  <section class="slide">
+    <h2>CRUD-операции</h2>
+
+    <ul>
+      <li><b>GET</b> (/users) — список пользователей</li>
+      <li><b>GET</b> (/users/1) — информация о пользователе</li>
+      <li><b>POST</b> (/users/add) — добавление пользователя</li>
+      <li><b>PATCH</b> (/users/1) — обновление пользователя</li>
+      <li><b>DELETE</b> (/users/1) — удаление пользователя</li>
+    </ul>
+  </section>
+
+  <!-- TODO Получение данных с сервера -->
+  <section class="slide">
+    <h2>Получение данных с сервера</h2>
+    <pre style="font-size: 14px;">
+      <code>fetch('https://jsonplaceholder.typicode.com/posts', {</code>
+      <code>  method: <mark>'POST'</mark>,</code>
+      <code>  body: JSON.stringify({</code>
+      <code>    title: 'Свой заголовок',</code>
+      <code>    body: 'Какой-то текст',</code>
+      <code>    userId: 1,</code>
+      <code>  }),</code>
+      <code>  headers: {</code>
+      <code>    'Content-type': 'application/json; charset=UTF-8',</code>
+      <code>  },</code>
+      <code>})</code>
+      <code>.then((response) => response.json())</code>
+      <code>.then((json) => console.log(json));</code>
+    </pre>
+  </section>
+
+  <!-- TODO Отправка данных с сервера -->
+  <section class="slide">
+    <h2>Отправка данных на сервер</h2>
+    <pre style="font-size: 14px;">
+      <code>fetch('https://jsonplaceholder.typicode.com/posts/1', {</code>
+      <code>  method: <mark>'PUT'</mark>,</code>
+      <code>  body: JSON.stringify({</code>
+      <code>    id: 1,</code>
+      <code>    title: 'Свой заголовок',</code>
+      <code>    body: 'Какой-то текст',</code>
+      <code>    userId: 1,</code>
+      <code>  }),</code>
+      <code>  headers: {</code>
+      <code>    'Content-type': 'application/json; charset=UTF-8',</code>
+      <code>  },</code>
+      <code>})</code>
+      <code>.then((response) => response.json())</code>
+      <code>.then((json) => console.log(json));</code>
+    </pre>
+  </section>
+
+  <!-- TODO JSON -->
+  <section class="slide">
+    <h2>JSON</h2>
+    <p><b>JSON</b> (JavaScript Object Notation) — текстовый формат обмена данными, основанный на JavaScript. Но при этом формат независим от JS и может использоваться в любом языке программирования</p>
+    <pre>
+      <code>{</code>
+      <code>  "name": "Иван",</code>
+      <code>  "age": 7</code>
+      <code>}</code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>JSON</h2>
+    <p>Методы:</p>
+    <ol>
+      <li><b>JSON.stringify()</b> для преобразования объектов в JSON</li>
+      <li><b>JSON.parse()</b> для преобразования JSON обратно в объект</li>
+    </ol>
+  </section>
+
+  <!-- TODO Спецификации -->
+  <section class="slide">
+    <h2>Спецификации</h2>
+    <ol>
+      <li><b>Спецификация DOM</b> — описывает структуру документа, манипуляции с контентом и события</li>
+      <li><b>Спецификация CSSOM</b> — описывает файлы стилей, правила написания стилей и манипуляций с ними, а также то, как это всё связано со страницей</li>
+      <li><b>Спецификация HTML</b> — описывает язык HTML (например, теги) и BOM (объектную модель браузера)</li>
+      <li>Некоторые классы описаны отдельно на https://spec.whatwg.org/</li>
+    </ol>
+  </section>
+
+  <!-- TODO Как искать информацию -->
+  <section class="slide">
+    <h2>Как искать информацию</h2>
+    <p>Для поиска удобно использовать поиск со&nbsp;словами <b>&laquo;WHATWG [термин]&raquo;</b> или <b>&laquo;MDN [термин]&raquo;</b></p>
+  </section>
+
+  <section class="slide clear">
+    <h2 class="shout">Практика</h2>
+  </section>
+
+  <!-- TODO Материалы и ссылки -->
+  <section class="slide">
+    <h2>Материалы и ссылки ч.1/3</h2>
+    <ol>
+      <li>
+        <a href="https://learn.javascript.ru/intro/" target="_blank">Основы JavaScript</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">JavaScript</a>
+      </li>
+      <li>
+        <a href="https://auth0.com/blog/a-brief-history-of-javascript/" target="_blank">A Brief History of JavaScript</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics/" target="_blank">Основы JavaScript (MDN)</a>
+      </li>
+      <li>
+        <a href="https://learn.javascript.ru/hello-world/" target="_blank">Подключение JavaScript на страницу</a>
+      </li>
+      <li>
+        <a href="https://learn.javascript.ru/browser-environment" target="_blank">Браузерное окружение, спецификации</a>
+      </li>
+      <li>
+        <a href="https://dom.spec.whatwg.org/" target="_blank">Спецификация DOM</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.2/3</h2>
+    <ol>
+      <li>
+        <a href="https://doka.guide/js/dom/" target="_blank">DOM</a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/TR/cssom-1/" target="_blank">Спецификация CSSOM</a>
+      </li>
+      <li>
+        <a href="https://html.spec.whatwg.org/" target="_blank">Спецификация HTML</a>
+      </li>
+      <li>
+        <a href="https://spec.whatwg.org/" target="_blank">Спецификация WHATWG</a>
+      </li>
+      <li>
+        <a href="https://learn.javascript.ru/dom-nodes/" target="_blank">DOM-дерево</a>
+      </li>
+      <li>
+        <a href="https://learn.javascript.ru/searching-elements-dom/" target="_blank">Поиск DOM-элементов</a>
+      </li>
+      <li>
+        <a href="https://learn.javascript.ru/styles-and-classes/" target="_blank">className и classList</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Материалы и ссылки ч.3/3</h2>
+    <ol>
+      <li>
+        <a href="https://learn.javascript.ru/introduction-browser-events/" target="_blank">Браузерные события</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/js/async-in-js/" target="_blank">Асинхронность в JavaScript</a>
+      </li>
+      <li>
+        <a href="https://doka.guide/js/array-foreach/" target="_blank">.forEach()</a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/ru/docs/Web/HTTP/Methods" target="_blank">Методы HTTP запроса</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="slide clear">
+    <div class="columns two">
+      <div class="center-block">
+        <h2>Слайды</h2>
+        <img src="img/slides.png" width="200" height="200"
+          alt="Ссылка на Слайды">
+      </div>
+      <div class="center-block">
+        <h2>Яндекс Диск</h2>
+        <img src="img/disk.png" width="200" height="200"
+          alt="Ссылка на Яндекс Диск">
+      </div>
+    </div>
+  </section>
+
+  <div class="progress"></div>
+
+  <script src="node_modules/@shower/core/dist/shower.js"></script>
+  <!-- Copyright © 2024 Yours Truly, Famous Inc. -->
+
+</body>
+
+</html>

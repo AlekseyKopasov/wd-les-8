@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "pdf": "shower pdf",
+    "serve": "shower serve --open",
+    "archive": "shower archive",
+    "bundle": "shower bundle",
+    "publish": "shower publish",
+    "push": "git add . && git cm -m \"обновляет слайды\" && git push origin master && npm run publish"
+  },
+  "devDependencies": {
+    "@shower/cli": "^0.3.1"
+  }
+}
